@@ -100,3 +100,5 @@ fi
 SUITE_NAME=`basename $PWD`
 
 NET_NAME=$SUITE_NAME
+
+export OSMO_TTCN3_COMPARE_ARGS="--allow-xpass"
