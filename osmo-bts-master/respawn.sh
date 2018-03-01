@@ -4,7 +4,7 @@ trap "kill 0" EXIT
 
 i=0
 max_i=500
-while [ $i -lt $max_i ]; do
+while [ -e /etc/passwd ]; do
 	echo "$i: starting: $*"
 	$* &
 	LAST_PID=$!
