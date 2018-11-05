@@ -6,6 +6,10 @@ docker_images_require() {
 	local from_line
 	local pull_arg
 
+	if [ -n "$NOBUILD" ]; then
+		export NO_DOCKER_IMAGE_BUILD=1
+	fi
+
 	for i in $@; do
 		# Trigger image build (cache will be used when up-to-date)
 		if [ -z "$NO_DOCKER_IMAGE_BUILD" ]; then
