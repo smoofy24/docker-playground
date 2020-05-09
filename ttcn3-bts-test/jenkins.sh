@@ -76,7 +76,6 @@ start_virtphy() {
 			--name ${BUILD_TAG}-virtphy -d \
 			$DOCKER_ARGS \
 			$REPO_USER/osmocom-bb-host-master \
-			virtphy -s /data/unix/osmocom_l2
 			/bin/sh -c "virtphy -s /data/unix/osmocom_l2 >>/data/virtphy.log 2>&1"
 }
 
